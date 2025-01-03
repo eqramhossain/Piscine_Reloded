@@ -1,5 +1,5 @@
-// #include <stdio.h>
-//
+#include <stdio.h>
+
 // int	ft_iterative_factorial(int nb);
 //
 // int	main(void)
@@ -8,7 +8,6 @@
 //
 // 	i = ft_iterative_factorial(5);
 // 	printf("i = %d\n", i);
-// 	return (0);
 // }
 
 int	ft_iterative_factorial(int nb)
@@ -16,10 +15,7 @@ int	ft_iterative_factorial(int nb)
 	int	tmp;
 
 	tmp = nb;
-	while (nb > 1)
-	{
-		tmp = tmp * (nb - 1);
-		nb--;
-	}
+	if (nb > 1)
+		tmp = tmp * ft_iterative_factorial(nb - 1);
 	return (tmp);
 }
